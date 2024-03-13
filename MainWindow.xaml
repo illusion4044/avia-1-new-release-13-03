@@ -1,0 +1,53 @@
+﻿<Window x:Class="Avia1.MainWindow"
+        Background="CornflowerBlue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Train Ticket Booking" Height="622" Width="1043">
+
+    <Border Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="10">
+        <Grid Height="303" Width="631">
+            <Button Content="Змінити мову" Click="ChangeLanguage_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+            <Button x:Name="CurrentFlightsButton" Content="Поточні рейси"  Background="white"  Width="150" Click="CurrentFlightsButton_Click_1" Margin="24,328,457,-63"/>
+            <Button x:Name="BookTicketButton" Content="Забронювати квиток" Background="white" Width="150" Click="BookTicketButton_Click" Margin="240,328,241,-62"/>
+            <Button x:Name="LoyalityButton" Content="Програма лояльності" Background="white" Width="150" Click="LoyalityButton_Click" Margin="304,324,-142,-63"/>
+            <Label  x:Name="destinationLabel" Content="Місце призначення:"  HorizontalAlignment="Left"   FontWeight="SemiBold" VerticalAlignment="Top" Margin="381,85,0,0"/>
+            <Label  Content="Вітаємо ! Замовте квиток" HorizontalAlignment="Center"  FontWeight="Bold" FontSize="22" VerticalAlignment="Top" Margin="0,20,0,0"/>
+            <ComboBox x:Name="destinationComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="516,85,0,0" Width="98">
+                <ComboBoxItem Content="Київ"/>
+                <ComboBoxItem Content="Львів"/>
+                <ComboBoxItem Content="Харків"/>
+                <ComboBoxItem Content="Одеса"/>
+                <ComboBoxItem Content="Біла Церква"/>
+            </ComboBox>
+
+            <Label x:Name="tripTypeLabel" Content="Тип подорожі:" HorizontalAlignment="Left" FontWeight="SemiBold" VerticalAlignment="Top" Margin="175,83,0,0"/>
+            <ComboBox x:Name="tripTypeComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,85,0,0" Width="98">
+                <ComboBoxItem Content="One Way"/>
+                <ComboBoxItem Content="Return"/>
+            </ComboBox>
+
+            <Label x:Name="ClassLabel" Content="Клас:" HorizontalAlignment="Left" FontWeight="SemiBold" VerticalAlignment="Top" Margin="21,84,0,0"/>
+            <ComboBox x:Name="classComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,85,0,0" Width="98">
+                <ComboBoxItem Content="Економ клас"/>
+                <ComboBoxItem Content="Стандарт клас"/>
+                <ComboBoxItem Content="Бізнес клас"/>
+            </ComboBox>
+
+            <Label x:Name="fullNameLabel" Content="Повне ім'я:" HorizontalAlignment="Left"  FontWeight="SemiBold" VerticalAlignment="Center" Margin="4,0,0,0"/>
+            <TextBox x:Name="fullNameTextBox"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="89,0,0,0" Width="171"/>
+
+            <Label x:Name="emailLabel" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="SemiBold" Margin="307,0,0,0" RenderTransformOrigin="0.513,1.638"/>
+            <TextBox x:Name="emailTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="381,0,0,0" Width="171"/>
+
+            <Button  x:Name="orderTicket" Content="Замовити Квиток" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,233,0,0" Foreground="White" FontSize="18" Click="BookTicket_Click" Background="CornflowerBlue" Height="42" Width="159"/>
+            <Button  x:Name="myTickets" Content="Мої квитки" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="380,233,0,0" Foreground="White" FontSize="18" Click="ViewTickets_Click" Background="CornflowerBlue" Height="42" Width="158" RenderTransformOrigin="1.194,0.433"/>
+
+            
+
+        </Grid>
+    </Border>
+</Window>
